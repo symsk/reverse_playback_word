@@ -1,43 +1,39 @@
 # ReversePlaybackWord
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/reverse_playback_word`. To experiment with that code, run `bin/console` for an interactive prompt.
+このgemは「音声を逆再生した際に聴こえる言葉」に変換するメソッドを提供します。  
+現在はひらがなのみに対応しております。
 
-TODO: Delete this and the text above, and describe your gem
+## インストール
 
-## Installation
-
-Add this line to your application's Gemfile:
+Gemfileに下記の１行を追加してください。
 
 ```ruby
 gem 'reverse_playback_word'
 ```
 
-And then execute:
+そして下記のコマンドを実行してください。
 
     $ bundle install
 
-Or install it yourself as:
+または下記コマンドで自分でインストールすることもできます。
 
     $ gem install reverse_playback_word
 
-## Usage
+## 使い方
+ひらがなに対して`to_gyakusaisei`メソッドを使うと逆再生化された文字列を返します。  
+ひらがな以外の文字列はそのまま出力されます。
+```
+"よろしく".to_gyakusaisei
+=> 'うきひそろゆ'
 
-TODO: Write usage instructions here
+"ヨロシク".to_gyakusaisei
+=> 'ヨロシク'
+```
+## 開発
+リポジトリを確認した後、依存関係をインストールするため`bin/setup`コマンドを実行してください。  
+そして、`rake spec`もしくは`bundle exec rspec`コマンドを実行しテストを走らせてください。  
+`bin/console`を実行して対話式の実行環境で確認することもできます。  
+このgemをあなたのローカル環境にインストールするために`bundle exec rake install`コマンドを実行してください。
 
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake ` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/reverse_playback_word. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/reverse_playback_word/blob/master/CODE_OF_CONDUCT.md).
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the ReversePlaybackWord project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/reverse_playback_word/blob/master/CODE_OF_CONDUCT.md).
+## ライセンス
+このgemはMITライセンスの条件の下でオープンソースとして利用できます。
